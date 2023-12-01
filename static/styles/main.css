@@ -1,10 +1,16 @@
 *,*::after,*::before{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
 
- body{
+.logo{
+    font-weight: 800;
+    font-size: larger;
+}
+
+ /* body{
     background-color: #F9F5FF;
     color:  black;
  }
@@ -15,4 +21,4 @@
         background-color: #28262C;
         color: white;
     }
- }
+ } */

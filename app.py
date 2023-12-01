@@ -18,6 +18,31 @@ def after_request(response):
     return response
 
 @app.route("/")
-@login_required
+@app.route("/index")
 def index():
     return render_template("index.html")
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    return render_template("register.html")
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    """Log user out"""
+
+    # Forget any user_id
+    session.clear()
+
+    # Redirect user to login form
+    return redirect("/")
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8000)
