@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{{ ckeditor.load() }}
+
+{% block title %}
+    Create note
+{% endblock %}
+
+{% block main %}
+    <a href="/" type="button" class="btn btn-success"><span class="">&#8592;</span>&nbsp; Go Back</a>
+    <section class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+          <form method="post">
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+              {{form.title.label(class="form-label")}}
+              {{form.title(class="form-control")}}
+              <!-- <input type="text" name="title" class="form-control" id="title" placeholder="Title..."> -->
+            </div>
+            <div class="mb-3">
+              {{form.content.label(class="form-label")}}
+              {{form.title(class="form-control")}}
+              <!-- <textarea class="form-control" name="content" id="content" rows="5" placeholder="Content"></textarea> -->
+            </div>
+            {{form.submit(class="btn btn-secondary")}}
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+          </form>
+        </div>
+    </section>
+
+{% endblock %}

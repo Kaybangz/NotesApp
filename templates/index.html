@@ -5,5 +5,11 @@
 {% endblock %}
 
 {% block main %}
-    <a href="/" type="button" class="btn btn-success"><span class="">&#43;</span>&nbsp; New Note</a>
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        Hello! Welcome, <strong>{{user.username}}</strong>.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <a href="/create_new" type="button" class="btn btn-success"><span class="">&#43;</span>&nbsp; Add new Note</a>
 {% endblock %}

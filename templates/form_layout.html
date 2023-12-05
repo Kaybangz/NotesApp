@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <title>Form</title>
-        <link rel="stylesheet" href="/static/styles/main.css" />
+        <title>Notez App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}" />
     </head>
 <body>
-    <main class="container">
+    <main class="container form_layout">
         <section class="row justify-content-center mt-5">
             {% block main %}{% endblock %}
         </section>

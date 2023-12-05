@@ -5,20 +5,16 @@
     font-family: 'Lato', sans-serif;
 }
 
+body{
+    background-color: #f4f4f4;
+}
+
 .logo{
     font-weight: 800;
     font-size: larger;
 }
 
- /* body{
-    background-color: #F9F5FF;
-    color:  black;
- }
-
-
- @media (prefers-color-scheme: dark){
-    body{
-        background-color: #28262C;
-        color: white;
-    }
- } */
+.form_layout a{
+    color:darkblue;
+    text-decoration: underline;
+}
