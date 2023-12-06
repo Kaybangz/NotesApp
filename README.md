@@ -1,6 +1,6 @@
 # Notez
 
-#### Video Demo: 
+#### Video Demo: [Youtube Video](https://youtu.be/wdLmbuv1iZo)
 
 ## Description:
 
