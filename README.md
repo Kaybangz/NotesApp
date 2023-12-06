@@ -37,4 +37,4 @@ This project is a note-taking application that provides users with the ability t
   - The backend of the application is built using Python, Flask web framework, SQLite
 
 - **Frontend:**
-  - HTML, CSS, Bootstrap, and JavaScript for building the user interface.
+  - HTML, CSS, Bootstrap, Jinja, and JavaScript for building the user interface.
