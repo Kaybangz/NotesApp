@@ -11,5 +11,35 @@
         <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <a href="/create_new" type="button" class="btn btn-success"><span class="">&#43;</span>&nbsp; Add new Note</a>
+    <a href="/add_note" type="button" class="btn btn-success"><span class="">&#43;</span>&nbsp; Add New Note</a>
+
+    {% if notes %}
+    <section class="row mt-3">
+      {% for note in notes %}
+        <div class="col-md-4 mb-3">
+          <div class="card border-0">
+            <div class="card-body">
+              <h5 class="font-weight-bold title">{{ note.title| truncate(22,true,'') }}</h5>
+              <hr class="my-3">
+              <div class="card-text">
+                {{ note.content | safe | truncate(22,true) }}
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <p class="text-muted">{{ note.createdAt }}</p>
+                <div class="d-flex justify-content-between h-100">
+                    <a href="/note/{{note.id}}" class="btn btn-outline-primary btn-sm">View Note</a>
+                  <!-- <a href="/update_note/{{ note.id }}" class="btn btn-outline-primary btn-sm">View Note</a> -->
+                  <!-- <form action="/delete_note/{{ note.id }}" method="post">
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                  </form> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% else %}
+    <p class="mt-5 text-xl-center">You don't have any notes yet...</p>
+  {% endif %}
 {% endblock %}

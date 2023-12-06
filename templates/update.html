@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Note
+{% endblock %}
+
+{% block main %}
+<a href="/note/{{note.id}}" type="button" class="btn btn-success mb-4"><span class="">&#8592;</span>&nbsp; Go Back</a>
+    <section class="row justify-content-center align-items-center">
+        <div class="col-md-8">
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.title.label }}
+            {{ form.title(class='form-control') }}
+        </div>
+        <div class="mb-3">
+            {{ form.content.label }}
+            {{ form.content(class='form-control ck-editor') }}
+        </div>
+        {{ form.submit(class='btn btn-primary') }}
+    </form>
+
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='content') }}
+</div>
+</section>
+{% endblock %}

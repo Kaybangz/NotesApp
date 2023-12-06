@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <a href="/" type="button" class="btn btn-success mb-4"><span class="">&#8592;</span>&nbsp; Go Back</a>
+    <section class="row justify-content-start align-items-center">
+        <div class="col-md-8">
+        <h2>{{ note.title }}</h2>
+        <hr class="my-3">
+        <div>
+            <p>{{note.content | safe}}</p>
+        </div>
+        <p class="text-muted">Date Added: {{note.createdAt}}</p>
+        <a href="/note/{{ note.id }}/update" class="btn btn-outline-primary btn-sm">Edit</a>
+        <a href="/note/{{ note.id }}/delete" class="btn btn-outline-danger btn-sm">Delete</a>
+        </div>
+    </section>
+
+{% endblock %}
